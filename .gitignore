@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific - Python scripts (extraction tools)
+scripts/fetch_kaggle_course.py
+scripts/kaggle_courses_config.json
+
+# Project specific - Documentation/Guides (auto-generated)
+DEVELOPER_GUIDE.md
+DOCS_INDEX.md
+EXTRACTION_GUIDE.md
+GENERIC_SCRAPER_GUIDE.md
+GENERIC_SCRAPER_QUICKREF.md
+IMPLEMENTATION_COMPLETE.md
+QUICK_START.md
+README_EXTRACTION_TOOL.md
+START_HERE.md
+TOOL_SUMMARY.md
+
+# Project specific - Translation related
+TRANSLATION_QUALITY_REVIEW.md
+CORRECTIONS_GUIDE.md
+TRANSLATION_ANALYSIS_SUMMARY.md
+LESSON_REVIEW_COMPLETE.md
+VERIFICATION_REPORT.md
