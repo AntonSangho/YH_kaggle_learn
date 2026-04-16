@@ -61,13 +61,13 @@ Let's take another look at the extraction figure from the last lesson. Remember 
 MaxPool2D
 ```
 
-![](img/17.png)
+![](img/IYO9lqp.png)
 
 Notice that after applying the ReLU function (Detect) the feature map ends up with a lot of "dead space," that is, large areas containing only 0's (the black areas in the image). Having to carry these 0 activations through the entire network would increase the size of the model without adding much useful information. Instead, we would like to condense the feature map to retain only the most useful part -- the feature itself.
 
 This in fact is what maximum pooling does. Max pooling takes a patch of activations in the original feature map and replaces them with the maximum activation in that patch.
 
-![](img/18.png)
+![](img/hK5U2cd.png)
 
 When applied after the ReLU activation, it has the effect of "intensifying" features. The pooling step increases the proportion of active pixels to zero pixels.
 
@@ -132,7 +132,7 @@ plt.title('Detect')
 plt.show();
 ```
 
-![](img/19.png)
+![](img/output_7.png)
 
 We'll use another one of the functions in tf.nn to apply the pooling step, tf.nn.pool. This is a Python function that does the same thing as the MaxPool2D layer you use when model building, but, being a simple function, is easier to use directly.
 
@@ -166,7 +166,7 @@ plt.axis('off')
 plt.show();
 ```
 
-![](img/20.png)
+![](img/output_8.png)
 
 Pretty cool! Hopefully you can see how the pooling step was able to intensify the feature by condensing the image around the most active pixels.
 
@@ -180,13 +180,13 @@ MaxPool2D
 
 Watch what happens when we repeatedly apply maximum pooling to the following feature map.
 
-![](img/21.png)
+![](img/97j8WA1.png)
 
 The two dots in the original image became indistinguishable after repeated pooling. In other words, pooling destroyed some of their positional information. Since the network can no longer distinguish between them in the feature maps, it can't distinguish them in the original image either: it has become invariant to that difference in position.
 
 In fact, pooling only creates translation invariance in a network over small distances, as with the two dots in the image. Features that begin far apart will remain distinct after pooling; only some of the positional information was lost, but not all of it.
 
-![](img/22.png)
+![](img/kUMWdcP.png)
 
 This invariance to small differences in the positions of features is a nice property for an image classifier to have. Just because of differences in perspective or framing, the same kind of feature might be positioned in various parts of the original image, but we would still like for the classifier to recognize that they are the same. Because this invariance is built into the network, we can get away with using much less data for training: we no longer have to teach it to ignore that difference. This gives convolutional networks a big efficiency advantage over a network with only dense layers. (You'll see another way to get invariance for free in Lesson 6 with Data Augmentation!)
 

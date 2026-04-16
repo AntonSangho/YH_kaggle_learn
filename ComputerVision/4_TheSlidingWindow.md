@@ -122,7 +122,7 @@ kernel_size
 pool_size
 ```
 
-![](img/23.png)
+![](img/LueNK6b.gif)
 
 There are two additional parameters affecting both convolution and pooling layers -- these are the strides of the window and whether to use padding at the image edges. The strides parameter says how far the window should move at each step, and the padding parameter describes how we handle the pixels at the edges of the input.
 
@@ -169,7 +169,7 @@ The distance the window moves at each step is called the stride. We need to spec
 strides=(2, 2)
 ```
 
-![](img/24.png)
+![](img/Tlptsvt.gif)
 
 What effect does the stride have? Whenever the stride in either direction is greater than 1, the sliding window will skip over some of the pixels in the input at each step.
 
@@ -235,7 +235,7 @@ padding='same'
 'same'
 ```
 
-![](img/25.png)
+![](img/RvGM2xb.gif)
 
 The VGG model we've been looking at uses same padding for all of its convolutional layers. Most modern convnets will use some combination of the two. (Another parameter to tune!)
 
@@ -270,7 +270,7 @@ kernel = tf.constant(
 show_kernel(kernel)
 ```
 
-![](img/26.png)
+![](img/output_9.png)
 
 The VGG architecture is fairly simple. It uses convolution with strides of 1 and maximum pooling with 
 2
@@ -299,7 +299,7 @@ show_extraction(
 )
 ```
 
-![](img/27.png)
+![](img/output_10.png)
 
 And that works pretty well! The kernel was designed to detect horizontal lines, and we can see that in the resulting feature map the more horizontal parts of the input end up with the greatest activation.
 
@@ -319,7 +319,7 @@ show_extraction(
 )
 ```
 
-![](img/28.png)
+![](img/output_11.png)
 
 This seems to reduce the quality of the feature extracted. Our input circle is rather "finely detailed," being only 1 pixel wide. A convolution with strides of 3 is too coarse to produce a good feature map from it.
 

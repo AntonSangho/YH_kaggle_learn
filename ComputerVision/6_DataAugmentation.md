@@ -18,11 +18,11 @@ And that's the whole idea behind data augmentation: add in some extra fake data 
 
 Typically, many kinds of transformation are used when augmenting a dataset. These might include rotating the image, adjusting the color or contrast, warping the image, or many other things, usually applied in combination. Here is a sample of the different ways a single image might be transformed.
 
-![](img/35.png)
+![](img/UaOm0ms.png)
 
 Data augmentation is usually done online, meaning, as the images are being fed into the network for training. Recall that training is usually done on mini-batches of data. This is what a batch of 16 images might look like when data augmentation is used.
 
-![](img/36.png)
+![](img/MFviYoE.png)
 
 Each time an image is used during training, a new random transformation is applied. This way, the model is always seeing something a little different than what it's seen before. This extra variance in the training data is what helps the model on new data.
 
@@ -166,9 +166,9 @@ history_frame.loc[:, ['loss', 'val_loss']].plot()
 history_frame.loc[:, ['binary_accuracy', 'val_binary_accuracy']].plot();
 ```
 
-![](img/37.png)
+![](img/output_14.png)
 
-![](img/38.png)
+![](img/output_15.png)
 
 The training and validation curves in the model from Tutorial 1 diverged fairly quickly, suggesting that it could benefit from some regularization. The learning curves for this model were able to stay closer together, and we achieved some modest improvement in validation loss and accuracy. This suggests that the dataset did indeed benefit from the augmentation.
 

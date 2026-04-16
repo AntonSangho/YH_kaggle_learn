@@ -8,13 +8,13 @@ Now that you've seen the layers a convnet uses to extract features, it's time to
 
 In the last three lessons, we saw how convolutional networks perform feature extraction through three operations: filter, detect, and condense. A single round of feature extraction can only extract relatively simple features from an image, things like simple lines or contrasts. These are too simple to solve most classification problems. Instead, convnets will repeat this extraction over and over, so that the features become more complex and refined as they travel deeper into the network.
 
-![](img/29.png)
+![](img/VqmC1rm.png)
 
 # Convolutional Blocks
 
 It does this by passing them through long chains of convolutional blocks which perform this extraction.
 
-![](img/30.png)
+![](img/pr8VwCZ.png)
 
 These convolutional blocks are stacks of Conv2D and MaxPool2D layers, whose role in feature extraction we learned about in the last few lessons.
 
@@ -26,7 +26,7 @@ Conv2D
 MaxPool2D
 ```
 
-![](img/31.png)
+![](img/8D6IhEw.png)
 
 Each block represents a round of extraction, and by composing these blocks the convnet can combine and recombine the features produced, growing them and shaping them to better fit the problem at hand. The deep structure of modern convnets is what allows this sophisticated feature engineering and has been largely responsible for their superior performance.
 
@@ -117,7 +117,7 @@ Found 5051 files belonging to 2 classes.
 
 Here is a diagram of the model we'll use:
 
-![](img/32.png)
+![](img/U1VdoDJ.png)
 
 Now we'll define the model. See how our model consists of three blocks of Conv2D and MaxPool2D layers (the base) followed by a head of Dense layers. We can translate this diagram more or less directly into a Keras Sequential model just by filling in the appropriate parameters.
 
@@ -232,9 +232,9 @@ history_frame.loc[:, ['loss', 'val_loss']].plot()
 history_frame.loc[:, ['binary_accuracy', 'val_binary_accuracy']].plot();
 ```
 
-![](img/33.png)
+![](img/output_12.png)
 
-![](img/34.png)
+![](img/output_13.png)
 
 This model is much smaller than the VGG16 model from Lesson 1 -- only 3 convolutional layers versus the 16 of VGG16. It was nevertheless able to fit this dataset fairly well. We might still be able to improve this simple model by adding more convolutional layers, hoping to create features better adapted to the dataset. This is what we'll try in the exercises.
 

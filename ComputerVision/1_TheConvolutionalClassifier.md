@@ -30,7 +30,7 @@ While our focus will be on image classification, what you'll learn in this cours
 
 A convnet used for image classification consists of two parts: a convolutional base and a dense head.
 
-![](img/1.png)
+![](img/U0n5xjU.png)
 
 The base is used to extract the features from an image. It is formed primarily of layers performing the convolution operation, but often includes other kinds of layers as well. (You'll learn about these in the next lesson.)
 
@@ -40,7 +40,7 @@ What do we mean by visual feature? A feature could be a line, a color, a texture
 
 The whole process goes something like this:
 
-![](img/2.png)
+![](img/UUAafkn.png)
 
 The features actually extracted look a bit different, but it gives the idea.
 
@@ -53,7 +53,7 @@ which class goes with what features (head).
 
 These days, convnets are rarely trained from scratch. More often, we reuse the base of a pretrained model. To the pretrained base we then attach an untrained head. In other words, we reuse the part of a network that has already learned to do 1. Extract features, and attach to it some fresh layers to learn 2. Classify.
 
-![](img/3.png)
+![](img/E49fsmV.png)
 
 Because the head usually consists of only a few dense layers, very accurate classifiers can be created from relatively little data.
 
@@ -244,9 +244,9 @@ history_frame.loc[:, ['loss', 'val_loss']].plot()
 history_frame.loc[:, ['binary_accuracy', 'val_binary_accuracy']].plot();
 ```
 
-![](img/4.png)
+![](img/output_1.png)
 
-![](img/5.png)
+![](img/output_2.png)
 
 # Conclusion
 
